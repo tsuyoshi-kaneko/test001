@@ -15,6 +15,10 @@
   <body>
     <a-scene>
       <a-assets>
+
+        <img id="texture" src="shima.png">
+
+
         <img id="city" crossorigin="anonymous" src="tk.jpg">
         <img id="city-thumb" crossorigin="anonymous" src="gif.gif">
         <img id="cubes-thumb" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-cubes.jpg">
@@ -36,6 +40,8 @@
             update-raycaster="#cursor"></a-plane>
         </script>
       </a-assets>
+
+      <a-box src="#texture" position="0 0.5 -1.5" rotation="0 45 0" width="1" height="1" depth="1"></a-box>
 
       <!-- 360-degree image. -->
       <a-sky id="image-360" radius="10" src="#city"></a-sky>
