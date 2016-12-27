@@ -27,6 +27,9 @@
         <img id="cubes" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/cubes.jpg">
         <img id="sechelt" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg">
 
+        <a-box src="#texture"  color="#DDDDDD" position="0 0.5 -1.5" rotation="0 45 0" width="1" height="1" depth="1"></a-box>
+        <a-sky color="#DDDDDD"></a-sky>
+
         <!-- Image link template to be reused. -->
         <script id="link" type="text/nunjucks">
           <a-plane class="link" height="1" width="1"
@@ -41,21 +44,13 @@
         </script>
       </a-assets>
 
-      <a-box src="#texture" position="0 0.5 -1.5" rotation="0 45 0" width="1" height="1" depth="1"></a-box>
+
 
       <!-- 360-degree image. -->
       <a-sky id="image-360" radius="10" src="#city"></a-sky>
 
 
-      <!-- Camera + cursor. -->
-      <a-entity camera look-controls>
-        <a-cursor id="cursor"
-          animation__click="property: scale; startEvents: click; from: 0.1 0.1 0.1; to: 1 1 1; dur: 150"
-          animation__fusing="property: fusing; startEvents: fusing; from: 1 1 1; to: 0.1 0.1 0.1; dur: 1500"
-          event-set__1="_event: mouseenter; color: springgreen"
-          event-set__2="_event: mouseleave; color: black"
-          raycaster="objects: .link"></a-cursor>
-      </a-entity>
+
     </a-scene>
   </body>
 </html>
